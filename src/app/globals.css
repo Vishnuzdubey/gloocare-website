@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #3D2B1F;
+  --foreground: #F7F2E9;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  position: relative;
+}
+
+/* Subtle Matte grain overlay across the entire site */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.025;
+  background-image: radial-gradient(#F7F2E9 1px, transparent 0);
+  background-size: 8px 8px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, #8B6944 0%, #6E4F2E 100%);
+  }
+
+  .text-brand-gradient {
+    background: linear-gradient(135deg, #8B6944 0%, #6E4F2E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-glass {
+    background: rgba(61, 43, 31, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(247, 242, 233, 0.12);
+  }
+
+  .bg-glass-dark {
+    background: rgba(42, 31, 23, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(247, 242, 233, 0.1);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
