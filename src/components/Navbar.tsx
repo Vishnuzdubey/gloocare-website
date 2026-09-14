@@ -6,6 +6,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
+const MAIN_USER_APP_URL = "https://play.google.com/store/apps/details?id=app.gloocare_salon_app";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -59,7 +61,9 @@ export default function Navbar() {
             <div className="flex items-center gap-3 sm:gap-6 z-50">
               {/* Primary CTA (Always Visible) */}
               <Link
-                href="/#download"
+                href={MAIN_USER_APP_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="relative overflow-hidden group px-3 sm:px-6 py-1.5 sm:py-2 rounded-full bg-brand-gradient text-white font-heading font-bold text-xs sm:text-sm shadow-md hover:scale-[1.02] transition-all"
               >
                 <div className="absolute inset-0 -translate-x-full group-hover:animate-shine-once bg-gradient-to-r from-transparent via-white/30 to-transparent z-10 pointer-events-none" />

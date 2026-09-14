@@ -37,13 +37,17 @@ html {
   .text-balance {
     text-wrap: balance;
   }
-  
+
+  .text-brand-gold {
+    color: #D8B07A !important;
+  }
+
   .bg-brand-gradient {
-    background: linear-gradient(135deg, #8B6944 0%, #6E4F2E 100%);
+    background: linear-gradient(135deg, #D8B07A 0%, #6B452F 100%);
   }
 
   .text-brand-gradient {
-    background: linear-gradient(135deg, #8B6944 0%, #6E4F2E 100%);
+    background: linear-gradient(135deg, #D8B07A 0%, #6B452F 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

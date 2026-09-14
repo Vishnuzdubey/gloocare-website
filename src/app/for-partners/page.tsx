@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import LeadForm from "@/components/LeadForm";
 import PartnerDashboardPreview from "@/components/PartnerDashboardPreview";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { 
   CheckCircle2, 
   Wrench, 
@@ -93,6 +94,18 @@ export default function ForPartners() {
             <p className="text-base text-[#F7F2E9] font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Connect your salon to GlooCare. Get more customers, manage walk-ins easily, and track your daily earnings — all from one simple tablet.
             </p>
+
+            <div className="pt-2">
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.salonpartnerapp"
+                target="_blank"
+                rel="noreferrer"
+                className="relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-brand-gradient px-5 py-3 text-sm font-heading font-bold text-white shadow-lg transition-transform hover:scale-[1.02]"
+              >
+                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine-once" />
+                <span className="relative">Get the Salon App</span>
+              </Link>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
               <FeatureCard 

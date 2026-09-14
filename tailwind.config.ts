@@ -11,11 +11,11 @@ const config: Config = {
       colors: {
         brand: {
           brown: {
-            DEFAULT: "#6E4F2E",
-            dark: "#4A3320",
+            DEFAULT: "#4A3320",
+            dark: "#2C1C12",
           },
           gold: {
-            DEFAULT: "#8B6944",
+            DEFAULT: "#D8B07A",
             light: "#F7F2E9",
           },
           cream: "#F7F2E9",
